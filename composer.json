@@ -9,7 +9,8 @@
   },
   "require": {
         "php" : "^7.0",
-        "composer/installers": "~1.0"
+        "composer/installers": "~1.0",
+        "ffuenf/shopware-common": "^1.0"
     },
     "require-dev": {
         "phpspec/phpspec": "^4.3",
