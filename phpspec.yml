@@ -1,0 +1,8 @@
+suites:
+  FfuenfCategoryUrlSlash:
+    namespace: FfuenfCategoryUrlSlash
+    psr4_prefix: FfuenfCategoryUrlSlash
+    spec_path: "%paths.config%/tests"
+    src_path: "%paths.config%"
+
+bootstrap: tests/Unit/bootstrap.php

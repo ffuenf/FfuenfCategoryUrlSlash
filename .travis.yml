@@ -1,0 +1,51 @@
+language: php
+php:
+- 7.0
+- 7.1
+- 7.2
+- 7.3
+matrix:
+  fast_finish: true
+  allow_failures:
+  - php: 7.2
+  - php: 7.3
+sudo: false
+services:
+- mysql
+env:
+  matrix:
+  - SHOPWARE_VERSION="5.5"
+  global:
+  - PLUGIN_NAME=FfuenfCategoryUrlSlash
+  - SHOPWARE_DIRECTORY="${HOME}/shopware"
+  - PLUGIN_DIRECTORY="${SHOPWARE_DIRECTORY}/custom/plugins"
+cache:
+  apt: true
+  directories:
+  - "${HOME}/.composer/cache"
+install:
+- mkdir -p build/logs
+- travis_retry composer update --no-interaction
+before_script:
+- git clone https://github.com/shopware/shopware.git ${SHOPWARE_DIRECTORY} --branch
+  ${SHOPWARE_VERSION}
+- ant -f ${SHOPWARE_DIRECTORY}/build/build.xml -Dapp.host=localhost -Ddb.user=travis
+  -Ddb.host=127.0.0.1 -Ddb.name=shopware build-unit
+- mv ${TRAVIS_BUILD_DIR} ${PLUGIN_DIRECTORY}/${PLUGIN_NAME}
+- php ${HOME}/shopware/bin/console sw:plugin:refresh
+- php ${HOME}/shopware/bin/console sw:plugin:install ${PLUGIN_NAME}
+- php ${HOME}/shopware/bin/console sw:plugin:activate ${PLUGIN_NAME}
+- cd ${PLUGIN_DIRECTORY}/${PLUGIN_NAME}
+script:
+- composer test
+- composer test-unit
+- composer test-spec
+after_success:
+- "./build.sh $TRAVIS_TAG"
+deploy:
+  skip_cleanup: true
+  provider: releases
+  file_glob: true
+  file: "${PLUGIN_NAME}*.zip"
+  on:
+    tags: true

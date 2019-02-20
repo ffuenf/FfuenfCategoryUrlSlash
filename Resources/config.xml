@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.5/engine/Shopware/Components/Plugin/schema/config.xsd">
+    <elements>
+        <element type="select">
+            <name>debug</name>
+            <label lang="de">debug logging aktiviert</label>
+            <label lang="en">debug logging enabled</label>
+            <value>0</value>
+            <store>
+                <option>
+                    <value>1</value>
+                    <label lang="de">Ja</label>
+                    <label lang="en">Yes</label>
+                </option>
+                <option>
+                    <value>0</value>
+                    <label lang="de">Nein</label>
+                    <label lang="en">No</label>
+                </option>
+            </store>
+        </element>
+    </elements>
+</config>
