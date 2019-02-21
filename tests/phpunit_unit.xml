@@ -10,7 +10,7 @@
          beStrictAboutTodoAnnotatedTests="true"
          verbose="true">
     <testsuites>
-        <testsuite name="CommonUnitTests">
+        <testsuite name="UnitTests">
             <directory>./Unit</directory>
         </testsuite>
     </testsuites>
@@ -21,7 +21,7 @@
     </groups>
     <filter>
         <whitelist>
-            <directory suffix=".php">../engine/Shopware/</directory>
+            <directory suffix=".php">../../../../engine/Shopware/</directory>
         </whitelist>
     </filter>
 </phpunit>
