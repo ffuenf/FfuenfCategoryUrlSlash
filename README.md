@@ -4,7 +4,9 @@ FfuenfCategoryUrlSlash
 =======================
 [![GitHub tag](https://img.shields.io/github/tag/ffuenf/FfuenfCategoryUrlSlash.svg)](https://github.com/ffuenf/FfuenfCategoryUrlSlash)
 [![Build Status](https://img.shields.io/travis/ffuenf/FfuenfCategoryUrlSlash.svg)](https://travis-ci.org/ffuenf/FfuenfCategoryUrlSlash)
-[![Code Quality](https://scrutinizer-ci.com/g/ffuenf/FfuenfCategoryUrlSlash/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ffuenf/FfuenfCategoryUrlSlash/?branch=master)
+[![Code Quality](https://scrutinizer-ci.com/g/ffuenf/FfuenfCategoryUrlSlash/badges/quality-score.png)](https://scrutinizer-ci.com/g/ffuenf/FfuenfCategoryUrlSlash/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/ffuenf/FfuenfCategoryUrlSlash/badges/coverage.png)](https://scrutinizer-ci.com/g/ffuenf/FfuenfCategoryUrlSlash)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/ffuenf/FfuenfCategoryUrlSlash/badges/code-intelligence.svg)](https://scrutinizer-ci.com/code-intelligence)
 [![PayPal Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J2PQS2WLT2Y8W&item_name=Shopware%20Extension%3a%20FfuenfCategoryUrlSlash&item_number=FfuenfCategoryUrlSlash&currency_code=EUR)
 
 This is a extension for [Shopware](https://de.shopware.com/) that adds correct category urls with trailing slashes.
