@@ -9,22 +9,12 @@
   },
   "require": {
         "php" : "^7.0",
-        "composer/installers": "~1.0",
-        "ffuenf/shopware-common": "^1.0"
+        "composer/installers": "~1.0"
     },
     "require-dev": {
-        "phpspec/phpspec": "^4.3",
-        "friendsofphp/php-cs-fixer": "^2.10",
         "roave/security-advisories": "dev-master"
     },
     "config": {
         "bin-dir": "bin"
-  },
-  "scripts": {
-        "test": "phpunit -c tests/phpunit.xml --colors=always",
-        "test-unit": "phpunit -c tests/phpunit_unit.xml --colors=always",
-        "test-spec": "bin/phpspec run --format dot",
-        "cs-check": "bin/php-cs-fixer fix --dry-run --allow-risky=yes -v",
-        "cs-fix": "bin/php-cs-fixer fix --allow-risky=yes -v"
   }
 }
