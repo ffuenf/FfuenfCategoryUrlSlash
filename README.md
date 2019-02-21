@@ -24,7 +24,7 @@ Requirements
 |                                                                              | PHP 7.0           | PHP 7.1           | PHP 7.2           | PHP 7.3           |
 | ---------------------------------------------------------------------------- | ----------------- | ----------------- | ----------------- | ----------------- |
 | [EOL](https://secure.php.net/supported-versions.php) / SEC-FIX / STABLE / RC | EOL               | SEC-FIX           | **STABLE**        | **STABLE**        |
-| automated tests on [travis]                                                  | **required pass** | **required pass** | **allow failure** | **allow failure** |
+| automated tests on [travis]                                                  | **required pass** | **required pass** | **required pass** | **required pass** |
 
 Shopware [officially supports PHP 5.6.4 and higher](https://community.shopware.com/Systemanforderungen_detail_1840.html#Server).
 
