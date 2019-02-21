@@ -10,6 +10,14 @@
     <requiredPlugins>
         <requiredPlugin pluginName="FfuenfCommon" minVersion="1.0.0"/>
     </requiredPlugins>
+    <changelog version="1.0.1">
+        <changes lang="en">
+            add test-suite ffuenf/SWTestStand
+        </changes>
+        <changes lang="de">
+            Testing mit ffuenf/SWTestStand
+        </changes>
+    </changelog>
     <changelog version="1.0.0">
         <changes lang="en">
             initial public release
