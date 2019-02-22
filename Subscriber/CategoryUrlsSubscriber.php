@@ -14,6 +14,7 @@ namespace FfuenfCategoryUrlSlash\Subscriber;
 
 use Enlight\Event\SubscriberInterface;
 use FfuenfCommon\Service\AbstractService;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Enlight_Hook_HookArgs;
 use Shopware\Models\Category\Category;
 use Shopware\Components\Model\ModelManager;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.5/engine/Shopware/Components/Plugin/schema/plugin.xsd">
     <label>URLs von Kategorien ohne Schrägstrich am Ende (FfuenfCategoryUrlSlash)</label>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <copyright>(c) by Achim Rosenhagen / ffuenf - Pra &amp; Rosenhagen GbR</copyright>
     <license>proprietary</license>
     <link>https://www.ffuenf.de</link>
@@ -10,6 +10,14 @@
     <requiredPlugins>
         <requiredPlugin pluginName="FfuenfCommon" minVersion="1.0.0"/>
     </requiredPlugins>
+    <changelog version="1.0.3">
+        <changes lang="en">
+            add missing dependency
+        </changes>
+        <changes lang="de">
+            fehlende Abhängigkeit korrigiert
+        </changes>
+    </changelog>
     <changelog version="1.0.2">
         <changes lang="en">
             fix tests
