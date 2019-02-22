@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of FfuenfCategoryUrlSlash.
 
+## 1.0.4 (February 22, 2019)
+
+* fix template call
+* fix config call
+* add phpunit dev-dependency for scrutinizer
+
 ## 1.0.3 (February 22, 2019)
 
 * add missing dependency

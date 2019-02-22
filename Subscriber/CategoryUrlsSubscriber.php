@@ -52,7 +52,7 @@ class CategoryUrlsSubscriber extends AbstractService implements SubscriberInterf
             $limit = $args->get('limit');
             $subject = $args->getSubject();
             $this->baseSetup($subject);
-            $routerCategoryTemplate = $this->config->get('routerCategoryTemplate');
+            $routerCategoryTemplate = $this->config['routerCategoryTemplate'];
             if (empty($routerCategoryTemplate)) {
                 return;
             }
@@ -67,7 +67,7 @@ class CategoryUrlsSubscriber extends AbstractService implements SubscriberInterf
             $routerCategoryTemplateSlash = rtrim($routerCategoryTemplate, '/');
             if ($routerCategoryTemplateSlash !== $routerCategoryTemplate) {
                 $template = 'string:' . $routerCategoryTemplateSlash;
-                $template = $this->template->createTemplate($template, $this->data);
+                $template = $this->templateManager->createTemplate($template, $this->data);
                 foreach ($categories as $category) {
                     if (!empty($category['external'])) {
                         continue;
@@ -99,20 +99,20 @@ class CategoryUrlsSubscriber extends AbstractService implements SubscriberInterf
      */
     public function baseSetup($subject)
     {
-        $keys = isset($this->template->registered_plugins['function']) ? array_keys($this->template->registered_plugins['function']) : [];
+        $keys = isset($this->templateManager->registered_plugins['function']) ? array_keys($this->templateManager->registered_plugins['function']) : [];
         if (!in_array('sCategoryPath', $keys)) {
-            $this->template->registerPlugin(
+            $this->templateManager->registerPlugin(
                 Smarty::PLUGIN_FUNCTION, 'sCategoryPath',
                 [$subject, 'sSmartyCategoryPath']
             );
         }
         if (!in_array('createSupplierPath', $keys)) {
-            $this->template->registerPlugin(
+            $this->templateManager->registerPlugin(
                 Smarty::PLUGIN_FUNCTION, 'createSupplierPath',
                 [$subject, 'createSupplierPath']
             );
         }
-        $this->data = $this->template->createData();
+        $this->data = $this->templateManager->createData();
         $this->data->assign('sConfig', $this->config);
         $this->data->assign('sRouter', $subject);
         $this->data->assign('sCategoryStart', Shopware()->Shop()->getCategory()->getId());
