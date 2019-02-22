@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of FfuenfCategoryUrlSlash.
 
+## 1.0.3 (February 22, 2019)
+
+* add missing dependency
+
 ## 1.0.2 (February 21, 2019)
 
 * fix tests
