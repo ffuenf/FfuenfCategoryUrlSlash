@@ -12,7 +12,8 @@
         "composer/installers": "~1.0"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-master"
+        "roave/security-advisories": "dev-master",
+        "phpunit/phpunit": "^6.5"
     },
     "config": {
         "bin-dir": "bin"
