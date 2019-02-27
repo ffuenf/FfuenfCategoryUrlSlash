@@ -31,7 +31,7 @@ class FfuenfCategoryUrlSlash extends Plugin
     public function build(ContainerBuilder $container)
     {
         $container->setParameter('ffuenf_category_url_slash.plugin_dir', $this->getPath());
-        $container->setParameter('ffuenf_category_url_slash.view_dir', $this->getPath());
+        $container->setParameter('ffuenf_category_url_slash.view_dir', $this->getPath() . '/Resources/views');
         parent::build($container);
     }
 
