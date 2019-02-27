@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of FfuenfCategoryUrlSlash.
 
+## 1.0.5 (February 27, 2019)
+
+* fix viewDir
+* fix logging call
+
 ## 1.0.4 (February 22, 2019)
 
 * fix template call

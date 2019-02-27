@@ -85,7 +85,7 @@ class CategoryUrlsSubscriber extends AbstractService implements SubscriberInterf
             }
         } catch (\Exception $ex) {
             if ($this->config['debug']) {
-                $this->logger->log('debug', $ex->getMessage());
+                $this->logger->log(100, $ex->getMessage());
             }
         }
     }
