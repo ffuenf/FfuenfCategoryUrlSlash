@@ -52,7 +52,7 @@ class CategoryUrlsSubscriber extends AbstractService implements SubscriberInterf
             $limit = $args->get('limit');
             $subject = $args->getSubject();
             $this->baseSetup($subject);
-            $routerCategoryTemplate = $this->config['routerCategoryTemplate'];
+            $routerCategoryTemplate = Shopware()->Config()->get('routerCategoryTemplate');
             if (empty($routerCategoryTemplate)) {
                 return;
             }
